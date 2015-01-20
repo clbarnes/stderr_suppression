@@ -5,7 +5,7 @@ import sys
 class NullErr():
     REGEX = r"({})|(^\s$)"
 
-    def __init__(self, regex_str):
+    def __init__(self, regex_str=r"(?s).*"):
         self.stderr = sys.stderr
         self.regex = re.compile(NullErr.REGEX.format(regex_str))
 
